@@ -193,3 +193,39 @@ body {
 .controls button:hover {
     background-color: #0056b3;
 }
+
+/* Cloudy Weather */
+.cloudy {
+    background-color: #A9A9A9; /* DarkGray */
+}
+
+.cloudy .weather-elements::before,
+.cloudy .weather-elements::after {
+    content: '';
+    position: absolute;
+    background-color: #CCCCCC; /* LightGray */
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: cloud-move 30s linear infinite;
+}
+
+.cloudy .weather-elements::before {
+    width: 12.5rem;
+    height: 7.5rem;
+    top: 20%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.cloudy .weather-elements::after {
+    width: 15.625rem;
+    height: 9.375rem;
+    top: 40%;
+    left: -20%;
+    animation-delay: 15s;
+}
+
+@keyframes cloud-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(120vw); }
+}
