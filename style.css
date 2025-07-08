@@ -66,51 +66,29 @@ body {
     overflow: hidden;
 }
 
-.rainy .weather-elements::before {
-    content: '';
+.raindrop {
+    position: absolute;
+    background-color: #ADD8E6; /* Light blue for rain */
+    width: 0.125rem; /* Smaller rain drops */
+    height: 0.625rem; /* Elongated shape */
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100%); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.rainy .weather-elements {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: transparent;
-    animation: rain 0.8s linear infinite;
-}
-
-@keyframes rain {
-    0% { box-shadow: 0rem 0rem 0rem 0rem rgba(0,0,0,0); }
-    100% {
-        box-shadow: 
-            0.625rem 6.25rem 0rem 0rem #ADD8E6, 
-            3.125rem 12.5rem 0rem 0rem #ADD8E6, 
-            5rem 3.125rem 0rem 0rem #ADD8E6, 
-            7.5rem 9.375rem 0rem 0rem #ADD8E6, 
-            9.375rem 15.625rem 0rem 0rem #ADD8E6, 
-            11.25rem 6.25rem 0rem 0rem #ADD8E6, 
-            13.75rem 12.5rem 0rem 0rem #ADD8E6, 
-            15.625rem 3.125rem 0rem 0rem #ADD8E6, 
-            17.5rem 9.375rem 0rem 0rem #ADD8E6, 
-            20rem 15.625rem 0rem 0rem #ADD8E6, 
-            21.875rem 6.25rem 0rem 0rem #ADD8E6, 
-            23.75rem 12.5rem 0rem 0rem #ADD8E6, 
-            26.25rem 3.125rem 0rem 0rem #ADD8E6, 
-            28.125rem 9.375rem 0rem 0rem #ADD8E6, 
-            30rem 15.625rem 0rem 0rem #ADD8E6, 
-            32.5rem 6.25rem 0rem 0rem #ADD8E6, 
-            34.375rem 12.5rem 0rem 0rem #ADD8E6, 
-            36.25rem 3.125rem 0rem 0rem #ADD8E6, 
-            38.75rem 9.375rem 0rem 0rem #ADD8E6, 
-            40.625rem 15.625rem 0rem 0rem #ADD8E6, 
-            42.5rem 6.25rem 0rem 0rem #ADD8E6, 
-            45rem 12.5rem 0rem 0rem #ADD8E6, 
-            46.875rem 3.125rem 0rem 0rem #ADD8E6, 
-            48.75rem 9.375rem 0rem 0rem #ADD8E6, 
-            51.25rem 15.625rem 0rem 0rem #ADD8E6, 
-            53.125rem 6.25rem 0rem 0rem #ADD8E6, 
-            55rem 12.5rem 0rem 0rem #ADD8E6, 
-            57.5rem 3.125rem 0rem 0rem #ADD8E6, 
-            59.375rem 9.375rem 0rem 0rem #ADD8E6, 
-            61.25rem 15.625rem 0rem 0rem #ADD8E6;
-        transform: translateY(100vh);
-    }
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 /* Snowy Weather */
