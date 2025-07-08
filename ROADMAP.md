@@ -8,6 +8,11 @@ To create a visually appealing and interactive web application that accurately s
 
 ---
 
+#### Current MVP: Realistic Rain Animation
+
+*   **Objective:** Implement a significantly more realistic rain animation, focusing on varying drop sizes, speeds, and subtle splash effects.
+*   **Validation:** Ensure smooth performance and seamless integration with the existing interface.
+
 #### Phase 1: Animation Enhancement & Refinement (Short-term)
 
 *   **Objective:** Significantly improve the realism and visual quality of existing weather animations.
